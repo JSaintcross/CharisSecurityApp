@@ -1,7 +1,7 @@
 <h1>Login</h1>
-# app/views/user_sessions/new.html.erb
+
 <%= form_for @user_session, :as => :user_session, :url => { :action => "create" } do |f| %>
-   <%= render "shared/error_messages", :target => @user_session %>
+   
   <%= f.label :email %><br />
   <%= f.text_field :email %><br />
   <br />
@@ -12,3 +12,8 @@
   <br />
   <%= f.submit "Login" %>
 <% end %>
+
+  <%= form_for @user, :as => :user, :url => { :action => "create"} do |f| %>
+    <%= f.submit "Register" %>
+    
+  <% end %>

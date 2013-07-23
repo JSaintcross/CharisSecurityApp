@@ -1,6 +1,7 @@
 #config/routes.rb
+SecurityApp::Application.routes.draw do
 
-resources :user_sessions 
+resources :user_sessions
   match 'login' => "user_sessions#new",      :as => :login
   match 'logout' => "user_sessions#destroy", :as => :logout
 
@@ -9,4 +10,5 @@ resources :user_sessions
 
   match 'signup' => 'users#new', :as => :signup
 
-  root :to => 'users#new'
+   root :to => 'users#new'
+end
