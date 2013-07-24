@@ -13,7 +13,7 @@
   <%= f.submit "Login" %>
 <% end %>
 
-  <%= form_for @user, :as => :user, :url => { :action => "create"} do |f| %>
+  <%= form_for @user, :as => :user, :url=> :signup do |f| %>
     <%= f.submit "Register" %>
     
   <% end %>
