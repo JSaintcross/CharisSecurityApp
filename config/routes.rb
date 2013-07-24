@@ -10,5 +10,5 @@ resources :user_sessions
 
   match 'signup' => 'users#new', :as => :signup
 
-   root :to => 'users#new'
+   root :to => "users#new"
 end
