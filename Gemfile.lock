@@ -57,7 +57,12 @@ GEM
       treetop (~> 1.4.8)
     mime-types (1.23)
     multi_json (1.7.7)
+<<<<<<< HEAD
+    mysql (2.9.1)
+    mysql2 (0.3.11)
+=======
     mysql2 (0.3.13)
+>>>>>>> 10690d8331ec3fb78977c8888ce90fd6ad3c89ff
     polyglot (0.3.3)
     rack (1.4.5)
     rack-cache (1.2)
@@ -115,6 +120,10 @@ DEPENDENCIES
   authlogic
   coffee-rails (~> 3.2.1)
   jquery-rails
+<<<<<<< HEAD
+  mysql
+=======
+>>>>>>> 10690d8331ec3fb78977c8888ce90fd6ad3c89ff
   mysql2
   rails (= 3.2.0)
   rake
