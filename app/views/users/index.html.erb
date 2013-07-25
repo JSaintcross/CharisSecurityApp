@@ -1,0 +1,11 @@
+<%#
+# To change this template, choose Tools | Templates
+# and open the template in the editor.
+%>
+
+<%= "index.html" %>
+<br/>
+<% @users.each do |u| %>
+<%= u.name %> | 
+<%= u.email %>
+<% end %>
