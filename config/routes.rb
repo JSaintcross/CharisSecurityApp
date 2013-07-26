@@ -1,7 +1,7 @@
 #config/routes.rb
 SecurityApp::Application.routes.draw do
 
-   root "users#new"
+   root :to => "users#new"
 
 resources :user_sessions
   match 'login' => "user_sessions#new",      :as => :login
