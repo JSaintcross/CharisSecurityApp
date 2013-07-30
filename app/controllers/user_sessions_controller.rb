@@ -10,7 +10,7 @@ class UserSessionsController < ApplicationController
       flash[:notice] = "Login successful!"
       redirect_to (:users)
     else
-      flash[:notice] = "Login failure"
+    flash[:error] = "Invalid email/password combination"
       render :action => :new
     end
   end
