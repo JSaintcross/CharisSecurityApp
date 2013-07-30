@@ -1,0 +1,39 @@
+<h1>Listing controls</h1>
+
+<table>
+  <tr>
+    <th>Id</th>
+    <th>Ctrlnumber</th>
+    <th>Title</th>
+    <th>Familyid</th>
+    <th>Sourceid</th>
+    <th>Description</th>
+    <th>Supplemental guidance</th>
+    <th>Baselineid</th>
+    <th>Priority</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @controls.each do |control| %>
+  <tr>
+    <td><%= control.ID %></td>
+    <td><%= control.CtrlNumber %></td>
+    <td><%= control.Title %></td>
+    <td><%= control.FamilyID %></td>
+    <td><%= control.SourceID %></td>
+    <td><%= control.Description %></td>
+    <td><%= control.Supplemental_Guidance %></td>
+    <td><%= control.BaselineID %></td>
+    <td><%= control.Priority %></td>
+    <td><%= link_to 'Show', control %></td>
+    <td><%= link_to 'Edit', edit_control_path(control) %></td>
+    <td><%= link_to 'Destroy', control, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Control', new_control_path %>

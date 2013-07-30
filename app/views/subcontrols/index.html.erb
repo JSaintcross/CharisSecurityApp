@@ -1,0 +1,35 @@
+<h1>Listing subcontrols</h1>
+
+<table>
+  <tr>
+    <th>Id</th>
+    <th>Parentcontrolid</th>
+    <th>Enumber</th>
+    <th>Title</th>
+    <th>Description</th>
+    <th>Supplemental guidance</th>
+    <th>Baselineid</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @subcontrols.each do |subcontrol| %>
+  <tr>
+    <td><%= subcontrol.ID %></td>
+    <td><%= subcontrol.ParentControlID %></td>
+    <td><%= subcontrol.ENumber %></td>
+    <td><%= subcontrol.Title %></td>
+    <td><%= subcontrol.Description %></td>
+    <td><%= subcontrol.Supplemental_Guidance %></td>
+    <td><%= subcontrol.BaselineID %></td>
+    <td><%= link_to 'Show', subcontrol %></td>
+    <td><%= link_to 'Edit', edit_subcontrol_path(subcontrol) %></td>
+    <td><%= link_to 'Destroy', subcontrol, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Subcontrol', new_subcontrol_path %>

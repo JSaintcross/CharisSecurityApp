@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Id:</b>
+  <%= @control_family.ID %>
+</p>
+
+<p>
+  <b>Title:</b>
+  <%= @control_family.Title %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @control_family.Description %>
+</p>
+
+<p>
+  <b>Acronym:</b>
+  <%= @control_family.Acronym %>
+</p>
+
+
+<%= link_to 'Edit', edit_control_family_path(@control_family) %> |
+<%= link_to 'Back', control_families_path %>

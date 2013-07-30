@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  ID: 
+  ParentControlID: 
+  ENumber: 
+  Title: 
+  Description: 
+  Supplemental_Guidance: 
+  BaselineID: 
+
+two:
+  ID: 
+  ParentControlID: 
+  ENumber: 
+  Title: 
+  Description: 
+  Supplemental_Guidance: 
+  BaselineID: 

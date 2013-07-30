@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Id:</b>
+  <%= @source.ID %>
+</p>
+
+<p>
+  <b>Title:</b>
+  <%= @source.Title %>
+</p>
+
+<p>
+  <b>Versionnum:</b>
+  <%= @source.VersionNum %>
+</p>
+
+<p>
+  <b>Versiondate:</b>
+  <%= @source.VersionDate %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @source.Description %>
+</p>
+
+
+<%= link_to 'Edit', edit_source_path(@source) %> |
+<%= link_to 'Back', sources_path %>

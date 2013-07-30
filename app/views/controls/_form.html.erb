@@ -1,0 +1,53 @@
+<%= form_for(@control) do |f| %>
+  <% if @control.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@control.errors.count, "error") %> prohibited this control from being saved:</h2>
+
+      <ul>
+      <% @control.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :ID %><br />
+    <%= f.text_field :ID %>
+  </div>
+  <div class="field">
+    <%= f.label :CtrlNumber %><br />
+    <%= f.text_field :CtrlNumber %>
+  </div>
+  <div class="field">
+    <%= f.label :Title %><br />
+    <%= f.text_field :Title %>
+  </div>
+  <div class="field">
+    <%= f.label :FamilyID %><br />
+    <%= f.text_field :FamilyID %>
+  </div>
+  <div class="field">
+    <%= f.label :SourceID %><br />
+    <%= f.text_field :SourceID %>
+  </div>
+  <div class="field">
+    <%= f.label :Description %><br />
+    <%= f.text_field :Description %>
+  </div>
+  <div class="field">
+    <%= f.label :Supplemental_Guidance %><br />
+    <%= f.text_field :Supplemental_Guidance %>
+  </div>
+  <div class="field">
+    <%= f.label :BaselineID %><br />
+    <%= f.text_field :BaselineID %>
+  </div>
+  <div class="field">
+    <%= f.label :Priority %><br />
+    <%= f.text_field :Priority %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

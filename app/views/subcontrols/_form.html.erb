@@ -1,0 +1,45 @@
+<%= form_for(@subcontrol) do |f| %>
+  <% if @subcontrol.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@subcontrol.errors.count, "error") %> prohibited this subcontrol from being saved:</h2>
+
+      <ul>
+      <% @subcontrol.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :ID %><br />
+    <%= f.text_field :ID %>
+  </div>
+  <div class="field">
+    <%= f.label :ParentControlID %><br />
+    <%= f.text_field :ParentControlID %>
+  </div>
+  <div class="field">
+    <%= f.label :ENumber %><br />
+    <%= f.text_field :ENumber %>
+  </div>
+  <div class="field">
+    <%= f.label :Title %><br />
+    <%= f.text_field :Title %>
+  </div>
+  <div class="field">
+    <%= f.label :Description %><br />
+    <%= f.text_field :Description %>
+  </div>
+  <div class="field">
+    <%= f.label :Supplemental_Guidance %><br />
+    <%= f.text_field :Supplemental_Guidance %>
+  </div>
+  <div class="field">
+    <%= f.label :BaselineID %><br />
+    <%= f.text_field :BaselineID %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

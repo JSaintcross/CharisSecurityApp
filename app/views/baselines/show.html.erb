@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Id:</b>
+  <%= @baseline.ID %>
+</p>
+
+<p>
+  <b>Title:</b>
+  <%= @baseline.Title %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @baseline.Description %>
+</p>
+
+
+<%= link_to 'Edit', edit_baseline_path(@baseline) %> |
+<%= link_to 'Back', baselines_path %>

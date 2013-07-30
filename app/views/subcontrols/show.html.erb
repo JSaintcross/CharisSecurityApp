@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Id:</b>
+  <%= @subcontrol.ID %>
+</p>
+
+<p>
+  <b>Parentcontrolid:</b>
+  <%= @subcontrol.ParentControlID %>
+</p>
+
+<p>
+  <b>Enumber:</b>
+  <%= @subcontrol.ENumber %>
+</p>
+
+<p>
+  <b>Title:</b>
+  <%= @subcontrol.Title %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @subcontrol.Description %>
+</p>
+
+<p>
+  <b>Supplemental guidance:</b>
+  <%= @subcontrol.Supplemental_Guidance %>
+</p>
+
+<p>
+  <b>Baselineid:</b>
+  <%= @subcontrol.BaselineID %>
+</p>
+
+
+<%= link_to 'Edit', edit_subcontrol_path(@subcontrol) %> |
+<%= link_to 'Back', subcontrols_path %>

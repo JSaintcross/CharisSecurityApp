@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  ID: 
+  Title: 
+  VersionNum: 
+  VersionDate: 
+  Description: 
+
+two:
+  ID: 
+  Title: 
+  VersionNum: 
+  VersionDate: 
+  Description: 

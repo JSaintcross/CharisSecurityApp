@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  ID: 
+  CtrlNumber: 
+  Title: 
+  FamilyID: 
+  SourceID: 
+  Description: 
+  Supplemental_Guidance: 
+  BaselineID: 
+  Priority: 
+
+two:
+  ID: 
+  CtrlNumber: 
+  Title: 
+  FamilyID: 
+  SourceID: 
+  Description: 
+  Supplemental_Guidance: 
+  BaselineID: 
+  Priority: 
