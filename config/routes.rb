@@ -10,6 +10,7 @@ SecurityApp::Application.routes.draw do
   resources :sources
 
   resources :controls
+   
 
    root :to => "users#new"
 
@@ -22,6 +23,5 @@ resources :user_sessions
   resources :user, :as => 'account'  # a convenience route
 
   match 'signup' => 'users#new', :as => :signup
-
-  
+  match 'home' => 'users#show', :as => :home
 end

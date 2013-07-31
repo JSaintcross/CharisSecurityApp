@@ -1,37 +1,9 @@
-# app/views/users/show.html.erb
-<p>
-<b>Email:</b>
-<%=h @user.email %>
-</p>
+<h1>Welcome
+  <%=@user.name%>!
 
-<p>
-<b>Login count:</b>
-<%=h @user.login_count %>
-</p>
 
-<p>
-<b>Last request at:</b>
-<%=h @user.last_request_at %>
-</p>
-
-<p>
-<b>Last login at:</b>
-<%=h @user.last_login_at %>
-</p>
-
-<p>
-<b>Current login at:</b>
-<%=h @user.current_login_at %>
-</p>
-
-<p>
-<b>Last login ip:</b>
-<%=h @user.last_login_ip %>
-</p>
-
-<p>
-<b>Current login ip:</b>
-<%=h @user.current_login_ip %>
-</p>
+</h1>
 
 <%= link_to 'Edit Account', edit_account_path %>
+<%= link_to 'Controls', :controller => :controls, :action => :index %>
+<%= link_to 'Sources', :controller => :sources, :action => :index %>

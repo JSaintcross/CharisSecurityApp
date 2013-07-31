@@ -23,7 +23,7 @@ class UsersController < ApplicationController
     # the User has not yet been activated
     if @user.save
       flash[:notice] = "Your account has been created."
-      redirect_to :users
+      redirect_to :home
     else
       flash[:error] = "There was a problme creating your account."
       render :action => :new
@@ -34,6 +34,10 @@ class UsersController < ApplicationController
 
   def show
     @user = current_user
+   respond_to do |format|
+      format.html # index.html.erb
+      format.xml { render :xml => @users }
+   end
   end
 
   def edit
