@@ -8,7 +8,7 @@ class UserSessionsController < ApplicationController
     @user_session = UserSession.new(params[:user_session])
     if @user_session.save
       flash[:notice] = "Login successful!"
-      redirect_to (:home)
+      redirect_to :home
     else
     flash[:error] = "Invalid email/password combination"
       render :action => :new

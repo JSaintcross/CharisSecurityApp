@@ -25,7 +25,7 @@ class UsersController < ApplicationController
       flash[:notice] = "Your account has been created."
       redirect_to :home
     else
-      flash[:error] = "There was a problme creating your account."
+      flash[:error] = "There was a problem creating your account."
       render :action => :new
     end
 
