@@ -6,7 +6,7 @@
 development:
   adapter: mysql2
   encoding: utf8
-  database: SecurityApp
+  database: security_app_dev
   pool: 5
   username: root
   password: root
