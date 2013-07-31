@@ -2,9 +2,9 @@
   <%=@user.name%>!
 </h1>
 
-<% form_tag controls_url, :method => :get do %>
+<% form_tag search_controls_path, :method => :get do %>
   <p>
-      <%= text_field_tag :search, params[:search] %>
+      <%= text_field_tag :query, params[:query] %>
       <%= submit_tag "Search", :name => nil %>
 
   </p>

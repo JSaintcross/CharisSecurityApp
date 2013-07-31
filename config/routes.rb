@@ -9,7 +9,11 @@ SecurityApp::Application.routes.draw do
 
   resources :sources
 
-  resources :controls
+  resources :controls do
+    collection do
+      get :search
+    end
+   end
    
 
    root :to => "users#new"
