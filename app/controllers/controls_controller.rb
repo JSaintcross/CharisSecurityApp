@@ -2,7 +2,10 @@ class ControlsController < ApplicationController
   # GET /controls
   # GET /controls.json
   def index
-    @controls = Control.all
+    @search = Control.search do
+      fulltext params[:search]
+    end
+    @controls = @search.results
 
     respond_to do |format|
       format.html # index.html.erb

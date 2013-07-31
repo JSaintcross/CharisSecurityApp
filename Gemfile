@@ -3,7 +3,8 @@ source 'https://rubygems.org'
 gem 'rails', '3.2.0'
 gem 'rake'
 gem 'mysql2'
-
+gem 'sunspot_rails', '1.3.0'
+gem 'sunspot_solr'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
