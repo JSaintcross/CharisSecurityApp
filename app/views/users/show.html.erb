@@ -1,8 +1,21 @@
 <h1>Welcome
   <%=@user.name%>!
+</h1>
 
+<% form_tag controls_url, :method => :get do %>
+  <p>
+      <%= text_field_tag :search, params[:search] %>
+      <%= submit_tag "Search", :name => nil %>
 
+  </p>
+<% end %>
+
+<<<<<<< HEAD
 </h1>
 <%= link_to 'Edit Account', edit_account_path(@user) %>
+=======
+
+<%= link_to 'Edit Account', edit_account_path(@user)%>
+>>>>>>> 6676e297a62c5d552aba87fa6e21d6da6c1762b4
 <%= link_to 'Controls', :controller => :controls, :action => :index %>
 <%= link_to 'Sources', :controller => :sources, :action => :index %>
