@@ -19,14 +19,14 @@
 <% @controls.each do |control| %>
   <tr>
     <td><%= control.id %></td>
-    <td><%= control.CtrlNumber %></td>
-    <td><%= control.Title %></td>
-    <td><%= control.FamilyID %></td>
-    <td><%= control.SourceID %></td>
-    <td><%= control.Description %></td>
-    <td><%= control.Supplemental_Guidance %></td>
-    <td><%= control.BaselineID %></td>
-    <td><%= control.Priority %></td>
+    <td><%= control.ctrlnumber %></td>
+    <td><%= control.title %></td>
+    <td><%= control.family_id %></td>
+    <td><%= control.source_id %></td>
+    <td><%= control.description %></td>
+    <td><%= control.supplemental_guidance %></td>
+    <td><%= control.baseline_id %></td>
+    <td><%= control.priority %></td>
     <td><%= link_to 'Show', control %></td>
     <td><%= link_to 'Edit', edit_control_path(control) %></td>
     <td><%= link_to 'Destroy', control, :confirm => 'Are you sure?', :method => :delete %></td>

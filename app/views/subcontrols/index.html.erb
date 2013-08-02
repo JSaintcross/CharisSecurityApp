@@ -16,13 +16,13 @@
 
 <% @subcontrols.each do |subcontrol| %>
   <tr>
-    <td><%= subcontrol.ID %></td>
-    <td><%= subcontrol.ParentControlID %></td>
-    <td><%= subcontrol.ENumber %></td>
-    <td><%= subcontrol.Title %></td>
-    <td><%= subcontrol.Description %></td>
-    <td><%= subcontrol.Supplemental_Guidance %></td>
-    <td><%= subcontrol.BaselineID %></td>
+    <td><%= subcontrol.id %></td>
+    <td><%= subcontrol.control_id %></td>
+    <td><%= subcontrol.subctrlnumber %></td>
+    <td><%= subcontrol.title %></td>
+    <td><%= subcontrol.description %></td>
+    <td><%= subcontrol.supplemental_guidance %></td>
+    <td><%= subcontrol.baseline_id %></td>
     <td><%= link_to 'Show', subcontrol %></td>
     <td><%= link_to 'Edit', edit_subcontrol_path(subcontrol) %></td>
     <td><%= link_to 'Destroy', subcontrol, :confirm => 'Are you sure?', :method => :delete %></td>

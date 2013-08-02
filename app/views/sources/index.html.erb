@@ -15,10 +15,10 @@
 <% @sources.each do |source| %>
   <tr>
     <td><%= source.id%></td>
-    <td><%= source.Title %></td>
-    <td><%= source.VersionNum %></td>
-    <td><%= source.VersionDate %></td>
-    <td><%= source.Description %></td>
+    <td><%= source.title %></td>
+    <td><%= source.versionnum %></td>
+    <td><%= source.versiondate %></td>
+    <td><%= source.description %></td>
     <td><%= link_to 'Show', source %></td>
     <td><%= link_to 'Edit', edit_source_path(source) %></td>
     <td><%= link_to 'Destroy', source, :confirm => 'Are you sure?', :method => :delete %></td>

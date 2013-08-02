@@ -2,15 +2,10 @@
 SecurityApp::Application.routes.draw do
 
   resources :baselines
-
-  resources :control_families
-
+  resources :families
   resources :subcontrols
-
   resources :sources
-
   resources :controls
-   
 
    root :to => "users#new"
 
