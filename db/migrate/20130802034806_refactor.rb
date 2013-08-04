@@ -28,13 +28,15 @@ class Refactor < ActiveRecord::Migration
       t.belongs_to :baseline
       t.belongs_to :source
       t.integer :priority
+        t.boolean :withdrawn
     end
 
     create_table :subcontrols do |t|
-      t.string :subctrlnumber
+      t.integer :subctrlnumber
       t.string :title
       t.text :description
       t.text :supplemental_guidance
+      t.boolean :withdrawn
       t.belongs_to :baseline
       t.belongs_to :control
     end

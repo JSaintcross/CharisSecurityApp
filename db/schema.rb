@@ -27,6 +27,7 @@ ActiveRecord::Schema.define(:version => 20130802034806) do
     t.integer "baseline_id"
     t.integer "source_id"
     t.integer "priority"
+    t.boolean "withdrawn"
   end
 
   create_table "families", :force => true do |t|
@@ -43,10 +44,11 @@ ActiveRecord::Schema.define(:version => 20130802034806) do
   end
 
   create_table "subcontrols", :force => true do |t|
-    t.string  "subctrlnumber"
+    t.integer "subctrlnumber"
     t.string  "title"
     t.text    "description"
     t.text    "supplemental_guidance"
+    t.boolean "withdrawn"
     t.integer "baseline_id"
     t.integer "control_id"
   end
