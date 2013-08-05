@@ -5,8 +5,10 @@ belongs_to :families
 belongs_to :baselines
 
   searchable do
-    text :CtrlNumber, :Title, :FamilyID, :SourceID, :Description, :Supplemental_Guidance, :BaselineID, :Priority
+    text :ctrlnumber, :title, :description, :supplemental_guidance
   end
+
+
 
 
 end
