@@ -11,54 +11,44 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130730175911) do
+ActiveRecord::Schema.define(:version => 20130802034806) do
 
   create_table "baselines", :force => true do |t|
-    t.string   "Title"
-    t.text     "Description"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
-  end
-
-  create_table "control_families", :force => true do |t|
-    t.string   "Title"
-    t.text     "Description"
-    t.string   "Acronym"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
+    t.string "title"
+    t.text   "description"
   end
 
   create_table "controls", :force => true do |t|
-    t.string   "CtrlNumber"
-    t.string   "Title"
-    t.integer  "FamilyID"
-    t.integer  "SourceID"
-    t.text     "Description"
-    t.text     "Supplemental_Guidance"
-    t.integer  "BaselineID"
-    t.integer  "Priority"
-    t.datetime "created_at",            :null => false
-    t.datetime "updated_at",            :null => false
+    t.string  "ctrlnumber"
+    t.string  "title"
+    t.integer "family_id"
+    t.text    "description"
+    t.text    "supplemental_guidance"
+    t.integer "baseline_id"
+    t.integer "source_id"
+    t.integer "priority"
+  end
+
+  create_table "families", :force => true do |t|
+    t.string "title"
+    t.text   "description"
+    t.string "acronym"
   end
 
   create_table "sources", :force => true do |t|
-    t.string   "Title"
-    t.string   "VersionNum"
-    t.date     "VersionDate"
-    t.text     "Description"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
+    t.string "title"
+    t.string "versionnum"
+    t.date   "versiondate"
+    t.text   "description"
   end
 
   create_table "subcontrols", :force => true do |t|
-    t.integer  "ParentControlID"
-    t.integer  "ENumber"
-    t.string   "Title"
-    t.text     "Description"
-    t.text     "Supplemental_Guidance"
-    t.text     "BaselineID"
-    t.datetime "created_at",            :null => false
-    t.datetime "updated_at",            :null => false
+    t.string  "subctrlnumber"
+    t.string  "title"
+    t.text    "description"
+    t.text    "supplemental_guidance"
+    t.integer "baseline_id"
+    t.integer "control_id"
   end
 
   create_table "user_sessions", :force => true do |t|

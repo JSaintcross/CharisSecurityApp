@@ -1,0 +1,29 @@
+<h1>Listing control_families</h1>
+
+<table>
+  <tr>
+    <th>Id</th>
+    <th>Title</th>
+    <th>Description</th>
+    <th>Acronym</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @families.each do |control_family| %>
+  <tr>
+    <td><%= control_family.id %></td>
+    <td><%= control_family.title %></td>
+    <td><%= control_family.description %></td>
+    <td><%= control_family.acronym %></td>
+    <td><%= link_to 'Show', control_family %></td>
+    <td><%= link_to 'Edit', edit_family_path(control_family) %></td>
+    <td><%= link_to 'Destroy', family, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Control family', new_family_path %>
