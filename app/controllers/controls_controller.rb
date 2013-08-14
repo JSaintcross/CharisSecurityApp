@@ -1,23 +1,18 @@
+
 class ControlsController < ApplicationController
   # GET /controls
   # GET /controls.json
   def index
-    @controls = Control.all
+    @search = Control.search do
+     fulltext params[:search]
+     paginate :page => params[:page], :per_page => 205
+    
+    end
+    @controls = @search.results
 
     respond_to do |format|
       format.html # index.html.erb
       format.json { render :json => @controls }
-    end
-  end
-
-  def search
-    @controls = Control.search do
-      keywords params[:query]
-    end.results
-    
-    respond_to do |format|
-      format.html {render :action => "index"}
-      format.xml {render :json => @controls}
     end
   end
 

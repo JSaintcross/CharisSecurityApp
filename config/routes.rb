@@ -1,6 +1,7 @@
 #config/routes.rb
 SecurityApp::Application.routes.draw do
 
+
   resources :baselines
   resources :families
   resources :subcontrols

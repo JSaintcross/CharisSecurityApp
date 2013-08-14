@@ -11,14 +11,14 @@
     <th></th>
   </tr>
 
-<% @families.each do |control_family| %>
+<% @families.each do |family| %>
   <tr>
-    <td><%= control_family.id %></td>
-    <td><%= control_family.title %></td>
-    <td><%= control_family.description %></td>
-    <td><%= control_family.acronym %></td>
-    <td><%= link_to 'Show', control_family %></td>
-    <td><%= link_to 'Edit', edit_family_path(control_family) %></td>
+    <td><%= family.id %></td>
+    <td><%= family.title %></td>
+    <td><%= family.description %></td>
+    <td><%= family.acronym %></td>
+    <td><%= link_to 'Show', family %></td>
+    <td><%= link_to 'Edit', edit_family_path(family) %></td>
     <td><%= link_to 'Destroy', family, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>

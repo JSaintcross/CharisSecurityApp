@@ -7,7 +7,7 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <div class="headerbar"">
+  <div class="headerbar">
        <% if current_user %>
           <%=current_user.email %>
           LOGOUT: <%= link_to "Logout",:logout %>
