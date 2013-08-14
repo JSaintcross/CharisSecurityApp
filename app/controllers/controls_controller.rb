@@ -4,9 +4,13 @@ class ControlsController < ApplicationController
   # GET /controls.json
   def index
     @search = Control.search do
-     fulltext params[:search]
+     fulltext params[:search] do
+       highlight :title, :description, :supplemental_guidance, :ctrlnumber
+     end
      paginate :page => params[:page], :per_page => 205
-    
+
+     
+
     end
     @controls = @search.results
 

@@ -1,6 +1,9 @@
 #config/routes.rb
 SecurityApp::Application.routes.draw do
 
+  
+  resources :password_reset
+  match 'forgot_password' => "password_resets#new"
 
   resources :baselines
   resources :families
@@ -14,7 +17,7 @@ SecurityApp::Application.routes.draw do
    end
    
 
-   root :to => "users#new"
+   
 
 resources :user_sessions
   match 'login' => "user_sessions#new",      :as => :login
@@ -26,4 +29,7 @@ resources :user_sessions
 
   match 'signup' => 'users#new', :as => :signup
   match 'home' => 'users#show', :as => :home
+
+  root :to => "user_sessions#new"
+
 end

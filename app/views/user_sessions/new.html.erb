@@ -19,6 +19,8 @@
 
   <%= form_for @user, :as => :user, :url=> :signup do |f| %>
     <%= f.submit "Register" %>
-
+   <% end %>
+  <%= form_for @user, :as => :user, :url=> :forgot_password do |f| %>
+    <%= f.submit "Forgot Password" %>
   
   <% end %>
