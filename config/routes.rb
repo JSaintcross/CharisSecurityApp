@@ -2,7 +2,7 @@
 SecurityApp::Application.routes.draw do
 
   
-  resources :password_reset
+  resources :password_resets
   match 'forgot_password' => "password_resets#new"
 
   resources :baselines

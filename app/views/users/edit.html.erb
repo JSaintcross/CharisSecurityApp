@@ -1,9 +1,10 @@
 <h1>Edit My Account</h1>
 
+<%= flash[:notice] %>
 <%= form_for @user, :as => :user, :url => {:action => "update"} do |f| %>
  <%= render :partial => "form", :object => f, :locals => { :user => @user}  %>
   <%= f.submit "Update" %>
 <% end %>
 
-<br /><%= link_to "My Profile", user_path %>
-<%= flash[:message] %>
+<br /><%= link_to "Home", user_path %>
+

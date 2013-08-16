@@ -5,7 +5,6 @@ class ControlsController < ApplicationController
   def index
     @search = Control.search do
      fulltext params[:search] do
-       highlight :title, :description, :supplemental_guidance, :ctrlnumber
      end
      paginate :page => params[:page], :per_page => 205
 

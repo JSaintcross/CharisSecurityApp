@@ -5,9 +5,9 @@ belongs_to :families
 belongs_to :baselines
 
   searchable do
-    text :ctrlnumber, :boost => 10, :stored => true
-    text :title, :boost => 10, :stored => true
-    text :description, :supplemental_guidance, :stored => true
+    text :ctrlnumber, :boost => 5
+    text :title, :boost => 3
+    text :description, :supplemental_guidance 
 
   end
 
